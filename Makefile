@@ -7,7 +7,7 @@ validate-dydx-testnet-4-gentx:
 		-e GENESIS_FILE_NAME=pregenesis.json \
 		-e ADD_GENTXS=true \
 		-v $(CURDIR):/workspace \
-		public-testnet-validate 
+		public-mainnet-validate 
 
 validate-dydx-testnet-4-final-genesis:
 	docker build --platform linux/amd64 --tag public-testnet-validate $(CURDIR)
@@ -18,6 +18,6 @@ validate-dydx-testnet-4-final-genesis:
 		-e GENESIS_FILE_NAME=genesis.json \
 		-e ADD_GENTXS=false \
 		-v $(CURDIR):/workspace \
-		public-testnet-validate 
+		public-mainnet-validate 
 
 .PHONY: validate-dydx-testnet-4-gentx validate-dydx-testnet-4-final-genesis
