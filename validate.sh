@@ -46,9 +46,6 @@ dydxprotocold init --chain-id=dydx-mainnet-1 dydx-1
 cp $dir_path/$genesis_file ~/.dydxprotocol/config/genesis.json
 
 if [ "$add_gentxs" = "true" ]; then
-  echo "Adding gentxs to pregenesis..."
-  add_genesis_account $dir_path/gentx
-
   mkdir ~/.dydxprotocol/config/gentx
   cp $dir_path/gentx/* ~/.dydxprotocol/config/gentx
 
